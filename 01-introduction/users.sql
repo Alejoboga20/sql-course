@@ -12,6 +12,16 @@ VALUES
 INSERT INTO
     users (name)
 VALUES
+    ('alejandro');
+
+INSERT INTO
+    users (name)
+VALUES
+    ('ale');
+
+INSERT INTO
+    users (name)
+VALUES
     ('test');
 
 INSERT INTO
@@ -42,3 +52,26 @@ LIMIT
     1
 OFFSET
     1;
+
+/* --------------------- */
+/* Where clause */
+SELECT
+    *
+FROM
+    users
+WHERE
+    name = 'alejo';
+
+SELECT
+    *
+FROM
+    users
+WHERE
+    name LIKE 'ale%';
+
+SELECT
+    *
+FROM
+    users
+WHERE
+    name LIKE '%g';
