@@ -80,4 +80,10 @@ WHERE
 /* Delete */
 DELETE FROM users
 WHERE
-    name LIKE 'ale%'
+    name LIKE 'ale%';
+
+/* --------------------- */
+/* DROP vs TRUNCATE Table */
+DROP TABLE users;
+
+TRUNCATE TABLE users;
