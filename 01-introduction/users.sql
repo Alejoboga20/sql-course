@@ -17,11 +17,28 @@ VALUES
 INSERT INTO
     users
 values
-    ('short_syntax')
-    /* --------------------- */
-    /* Update rows */
+    ('short_syntax');
+
+/* --------------------- */
+/* Update rows */
 UPDATE users
 SET
     "name" = 'testing'
 WHERE
-    "name" = 'test'
+    "name" = 'test';
+
+/* --------------------- */
+/* Select rows */
+SELECT
+    *
+from
+    users;
+
+SELECT
+    name
+from
+    users
+LIMIT
+    1
+OFFSET
+    1;
