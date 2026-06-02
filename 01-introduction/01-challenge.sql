@@ -39,7 +39,7 @@ DELETE FROM users
 where
     id = (
         SELECT
-            COUNT(name)
+            MAX(id)
         from
             users
     )
