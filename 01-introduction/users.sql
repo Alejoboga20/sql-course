@@ -75,3 +75,9 @@ FROM
     users
 WHERE
     name LIKE '%g';
+
+/* --------------------- */
+/* Delete */
+DELETE FROM users
+WHERE
+    name LIKE 'ale%'
