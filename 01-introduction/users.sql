@@ -18,3 +18,10 @@ INSERT INTO
     users
 values
     ('short_syntax')
+    /* --------------------- */
+    /* Update rows */
+UPDATE users
+SET
+    "name" = 'testing'
+WHERE
+    "name" = 'test'
