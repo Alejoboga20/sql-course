@@ -1,7 +1,12 @@
 DROP TABLE users;
 
 CREATE TABLE
-    users (id serial, name VARCHAR(100));
+    users (
+        id SERIAL,
+        name VARCHAR(100),
+        first_name VARCHAR(50),
+        last_name VARCHAR(50)
+    );
 
 INSERT INTO
     "users" (name)
