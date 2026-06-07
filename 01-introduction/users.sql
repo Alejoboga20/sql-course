@@ -87,3 +87,15 @@ WHERE
 DROP TABLE users;
 
 TRUNCATE TABLE users;
+
+/* String operators and functions */
+SELECT
+    id,
+    UPPER(name) AS upper_name,
+    LOWER(name) AS lower_name,
+    LENGTH (name) AS name_length,
+    CONCAT (id, ' - ', name) AS id_name,
+    id || ' - ' || name AS bar_code,
+    name
+FROM
+    users;
