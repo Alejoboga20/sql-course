@@ -99,3 +99,11 @@ SELECT
     name
 FROM
     users;
+
+/* Substring and Position */
+SELECT
+    name,
+    SUBSTRING(name, 0, POSITION(' ' in name)) as first_name,
+    SUBSTRING(name, POSITION(' ' in name) + 1, LENGTH (name)) as last_name
+FROM
+    users;
