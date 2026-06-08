@@ -28,4 +28,14 @@ FROM
 WHERE
     followers BETWEEN 4600 AND 4700
 ORDER BY
-    followers desc
+    followers desc;
+
+/* COUNT MAX MIN AVG ROUND */
+SELECT
+    COUNT(*) as total_users,
+    MIN(followers) as min_followers,
+    MAX(followers) as max_followers,
+    ROUND(AVG(followers)) as avg_followers,
+    SUM(followers) / COUNT(*) as avg_manual
+FROM
+    users;
