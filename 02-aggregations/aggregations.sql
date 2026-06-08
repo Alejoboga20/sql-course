@@ -39,3 +39,16 @@ SELECT
     SUM(followers) / COUNT(*) as avg_manual
 FROM
     users;
+
+/* Group by */
+select
+    count(*),
+    followers
+from
+    users
+where
+    followers between 4500 and 4999
+group by
+    followers
+order by
+    followers desc;
