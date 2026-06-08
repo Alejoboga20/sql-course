@@ -16,4 +16,16 @@ SELECT
 FROM
     users
 WHERE
-    followers > 4600
+    followers > 4600;
+
+/* Between Operator */
+SELECT
+    first_name,
+    last_name,
+    followers
+FROM
+    users
+WHERE
+    followers BETWEEN 4600 AND 4700
+ORDER BY
+    followers desc
