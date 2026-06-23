@@ -52,3 +52,16 @@ group by
     followers
 order by
     followers desc;
+
+/* having */
+select
+    count(*),
+    country
+from
+    users
+group by
+    country
+having
+    count(*) > 5
+order by
+    count(*) desc;
