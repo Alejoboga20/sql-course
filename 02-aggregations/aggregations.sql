@@ -65,3 +65,9 @@ having
     count(*) > 5
 order by
     count(*) desc;
+
+/* distinct */
+select distinct
+    country
+from
+    users;
