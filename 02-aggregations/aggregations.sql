@@ -83,4 +83,22 @@ group by
 having
     count(*) > 1
 order by
-    count(substring(email, position('@' in email) + 1)) desc
+    count(substring(email, position('@' in email) + 1)) desc;
+
+/* subqueries */
+select
+    sum(count) as total
+from
+    (
+        SELECT
+            count(*),
+            substring(email, position('@' in email) + 1) as email_domain
+        FROM
+            users
+        group by
+            substring(email, position('@' in email) + 1)
+        having
+            count(*) > 1
+        order by
+            count(substring(email, position('@' in email) + 1)) desc
+    ) as email_domains;
