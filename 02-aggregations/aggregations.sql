@@ -71,3 +71,16 @@ select distinct
     country
 from
     users;
+
+/* group by with functions */
+SELECT
+    count(*),
+    substring(email, position('@' in email) + 1) as email_domain
+FROM
+    users
+group by
+    substring(email, position('@' in email) + 1)
+having
+    count(*) > 1
+order by
+    count(substring(email, position('@' in email) + 1)) desc
